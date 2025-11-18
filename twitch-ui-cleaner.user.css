@@ -1,10 +1,10 @@
 /* ==UserStyle==
 @name        Twitch UI Cleaner
 @namespace   https://twitch.tv
-@version     1.0
-@description Hides Bits, Stories, promotional buttons, chat "more options", and other clutter for a cleaner Twitch interface
+@version     1.1
+@description Hides Bits, Stories, promotional buttons, chat "more options", and other clutter for a cleaner Twitch interface. Now available on GitHub.
 @author      Raspberrykitty1
-@homepageURL https://www.twitch.tv
+@homepageURL https://github.com/RaspberryKitty1/UserScripts
 @match       *://www.twitch.tv/*
 @run-at      document-start
 ==/UserStyle== */
