@@ -1,6 +1,6 @@
 # UI Cleaner UserStyles
 
-A set of **UserStyles** to declutter the Twitch and NotebookLM interfaces, hiding promotional elements, unnecessary buttons, and other distractions for a cleaner browsing experience.
+A set of **UserStyles** to declutter the Twitch, NotebookLM, and X.com/Twitter interfaces, hiding promotional elements, unnecessary buttons, and other distractions for a cleaner browsing experience.
 
 ---
 
@@ -90,3 +90,4 @@ A set of **UserStyles** to declutter the Twitch and NotebookLM interfaces, hidin
 
 * MIT License
 * Author: **Raspberrykitty1**
+
