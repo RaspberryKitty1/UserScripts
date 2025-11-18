@@ -50,7 +50,7 @@ A set of **UserStyles** to declutter the Twitch, NotebookLM, and X.com/Twitter i
 
    * [NotebookLM UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/notebooklm-ui-cleaner.user.css)
 
-   * [X.com / Twitter UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/x-ui-cleaner.user.css)
+   * [X.com / Twitter UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/x_twitter-ui-cleaner.user.css)
 
    > Click the link, and Stylus should prompt you to **install the style automatically**.
 
