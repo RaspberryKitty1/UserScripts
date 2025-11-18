@@ -1,0 +1,105 @@
+/* ==UserStyle==
+@name        X.com UI Cleaner
+@namespace   https://x.com
+@version     1.7
+@description Hides news segments, right-hand panels, trends, "who to follow", Grok buttons, Premium prompts, Tag location, Schedule post, Articles & Highlights tabs, and other clutter for a cleaner X.com/Twitter interface
+@author      Raspberrykitty1
+@homepageURL https://x.com
+@match       *://x.com/*
+@match       *://twitter.com/*
+@run-at      document-start
+==/UserStyle== */
+
+@-moz-document domain("x.com"), domain("twitter.com") {
+/* ================================== */
+/*           Sidebar & Panels         */
+/* ================================== */
+
+/* Hide the entire Grok drawer */
+div[data-testid="GrokDrawer"],
+/* Hide the sidebar completely */
+div[data-testid="news_sidebar"],
+/* Hide Twitter "Trending now" / "What's happening" sidebar */
+div[aria-label="Timeline: Trending now"] {
+    display: none !important;
+}
+
+/* Hide Super Upsell Card (Premium prompt) */
+div[data-testid="super-upsell-UpsellCardRenderProperties"] {
+    display: none !important;
+}
+
+/* ================================== */
+/*          Sidebar Links & Tabs      */
+/* ================================== */
+
+/* Hide specific sidebar links */
+a[aria-label="Communities"],
+a[aria-label="Grok"],
+a[aria-label="Bookmarks"],
+a[aria-label="Lists"],
+a[aria-label="Search and explore"],
+a[href^="https://ads.x.com"],
+a[href="/i/spaces/start"],
+a[href="/i/monetization"] {
+    display: none !important;
+}
+
+/* Hide Premium signup link / tabs */
+a[aria-label="Premium"],
+a[data-testid="premium-signup-tab"],
+a[role="link"][href="/i/premium_sign_up"],
+a[href^="/i/premium_sign_up?referring_page=settings"] {
+    display: none !important;
+}
+
+/* Hide Creator Subscriptions tab in settings */
+a[href^="/settings/manage_subscriptions"] {
+    display: none !important;
+}
+
+/* Hide Monetization tab in settings */
+a[href^="/settings/monetization"] {
+    display: none !important;
+}
+
+/* ================================== */
+/*          Buttons / Actions         */
+/* ================================== */
+
+/* Hide Grok / Bookmark / Profile actions buttons */
+button[aria-label="Grok actions"],
+button[aria-label="Bookmark"],
+button[aria-label="Profile Summary"] {
+    display: none !important;
+}
+
+/* Hide Grok "Enhance your post" button */
+button[data-testid="grokImgGen"],
+div[role="presentation"] > button[data-testid="grokImgGen"] {
+    display: none !important;
+}
+
+/* Hide Tag location button */
+button[data-testid="geoButton"],
+div[role="presentation"] > button[data-testid="geoButton"] {
+    display: none !important;
+}
+
+/* Hide Schedule post button */
+button[data-testid="scheduleOption"],
+div[role="presentation"] > button[data-testid="scheduleOption"] {
+    display: none !important;
+}
+
+/* ================================== */
+/*          Tabs: Articles & Highlights */
+/* ================================== */
+
+/* Hide Articles & Highlights tabs and their parent containers */
+div[role="presentation"]:has(> a[href$="/articles"]),
+div[role="presentation"]:has(> a[href$="/highlights"]) {
+    display: none !important;
+}
+
+}

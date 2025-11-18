@@ -24,6 +24,17 @@ A set of **UserStyles** to declutter the Twitch and NotebookLM interfaces, hidin
 * Hides **feedback buttons** (thumbs up/down) and **Upgrade / Pro buttons**.
 * Removes **Interactive Mode button** for a streamlined experience.
 
+
+### **X.com / Twitter UI Cleaner**
+
+* Hides **sidebar panels** including Grok, Trends, “Who to Follow”, and “Trending now”.
+* Removes **Super Upsell Cards** (Premium prompts) and **Promotional tabs**.
+* Hides **Articles** and **Highlights** tabs.
+* Removes **Grok buttons**, **Tag location**, and **Schedule post** buttons.
+* Hides **monetization links**, **ads links**, and other clutter from the sidebar.
+* Cleans up **profile settings tabs** like Premium, Creator Subscriptions, and Monetization.
+* Collapses leftover spacing from hidden buttons and tabs for a streamlined layout.
+
 ---
 
 ## Installation
@@ -38,6 +49,8 @@ A set of **UserStyles** to declutter the Twitch and NotebookLM interfaces, hidin
    * [Twitch UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/twitch-ui-cleaner.user.css)
 
    * [NotebookLM UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/notebooklm-ui-cleaner.user.css)
+
+   * [X.com / Twitter UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/x-ui-cleaner.user.css)
 
    > Click the link, and Stylus should prompt you to **install the style automatically**.
 
