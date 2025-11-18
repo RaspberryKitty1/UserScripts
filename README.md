@@ -35,9 +35,9 @@ A set of **UserStyles** to declutter the Twitch and NotebookLM interfaces, hidin
 
 2. Install directly from GitHub using the **raw CSS URLs**:
 
-   * [Twitch UI Cleaner](https://raw.githubusercontent.com/raspberrykitty1/UserScripts/twitch-ui-cleaner.user.css)
+   * [Twitch UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/twitch-ui-cleaner.user.css)
 
-   * [NotebookLM UI Cleaner](https://raw.githubusercontent.com/raspberrykitty1/UserScripts/notebooklm-ui-cleaner.user.css)
+   * [NotebookLM UI Cleaner](https://github.com/RaspberryKitty1/UserScripts/raw/refs/heads/main/notebooklm-ui-cleaner.user.css)
 
    > Click the link, and Stylus should prompt you to **install the style automatically**.
 
