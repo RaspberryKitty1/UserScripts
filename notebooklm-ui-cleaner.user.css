@@ -1,0 +1,88 @@
+/* ==UserStyle==
+@name        NotebookLM UI Cleaner
+@namespace   https://notebooklm.google.com
+@version     1.2
+@description Hides Discovery sections, promotional content, footer, notes, sharing UI, Google Apps menu, featured notebooks, and toggles for a cleaner interface
+@author      Raspberrykitty1
+@homepageURL https://notebooklm.google.com
+==/UserStyle== */
+
+@-moz-document domain("notebooklm.google.com") {
+/* ==================================================
+   HIDE FOOTER AND DISCLAIMER
+   ================================================== */
+footer.footer,
+.footer.mat-body-small {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE DISCOVERY / PROMO SECTIONS
+   ================================================== */
+.source-discovery-container,
+.source-discovery-promo-container {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE SHARE / NON-CTA BUTTONS
+   ================================================== */
+.non-cta-buttons-container,
+.share-button,
+.share-button-container {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE ADD NOTE BUTTON
+   ================================================== */
+.add-note-button,
+button .save-to-note-text,
+button.mdc-button.label-medium-button.mdc-button--outlined.mat-unthemed {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE GOOGLE APPS MENU
+   ================================================== */
+#gbwa .gb_D {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE FEATURED NOTEBOOKS (MAIN PAGE)
+   ================================================== */
+.featured-projects-container,
+.see-all-button-container,
+.project-section-toggle-option .editors-picks-toggle-label,
+.project-section-toggle-option:has(.editors-picks-toggle-label) {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE FEEDBACK BUTTONS (THUMBS UP/DOWN)
+   ================================================== */
+button[mattooltip="Good discussion"],
+button[mattooltip="Good summary"],
+button[mattooltip="Bad discussion"],
+button[mattooltip="Bad summary"] {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE UPGRADE / PRO BUTTON
+   ================================================== */
+button#UPGRADE_OR_MANAGE_PLUS,
+button#UPGRADE_OR_MANAGE_PLUS span.mat-mdc-menu-item-text,
+button#UPGRADE_OR_MANAGE_PLUS .upgrade-icon-wrapper {
+  display: none !important;
+}
+
+/* ==================================================
+   HIDE INTERACTIVE MODE BUTTON
+   ================================================== */
+.artifact-action-container button[mattooltip="Interactive mode"] {
+  display: none !important;
+}
+
+}

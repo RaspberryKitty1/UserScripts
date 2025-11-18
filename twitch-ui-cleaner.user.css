@@ -1,0 +1,61 @@
+/* ==UserStyle==
+@name        Twitch UI Cleaner
+@namespace   https://twitch.tv
+@version     1.0
+@description Hides Bits, Stories, promotional buttons, chat "more options", and other clutter for a cleaner Twitch interface
+@author      Raspberrykitty1
+@homepageURL https://www.twitch.tv
+@match       *://www.twitch.tv/*
+@run-at      document-start
+==/UserStyle== */
+
+@-moz-document domain("twitch.tv") {
+    /* 🔹 Remove the entire Bits icon container (first block in the button) */
+    button[aria-label="Bits and Points Balances"] .kAcorY > .eCNebZ {
+        display: none !important;
+    }
+
+    /* 🔹 Remove the Bits number */
+    button[aria-label="Bits and Points Balances"] [data-test-selector="bits-balance-string"] {
+        display: none !important;
+    }
+
+    /* 🔹 Collapse leftover flex spacing between Bits and Points */
+    button[aria-label="Bits and Points Balances"] .kAcorY {
+        gap: 0 !important;
+    }
+
+    /* 🔹 Hide Bits buttons and other clutter */
+    [data-a-target="bits-button"],
+    [data-a-target="top-nav-get-bits-button"],
+    .chMBew > .kKpGeT,
+    .cFdOrq,
+
+    /* Hide "More options" (three dots) in chat */
+    button[data-a-target="report-button-more-button"],
+
+    /* Hide Stories section */
+    .storiesLeftNavSection--csO9S,
+    .hdoiLi,
+    .storiesLeftNavSectionCollapsedButton--txKvw,
+    button[aria-label="Open stories"],
+
+    /* Hide "Go Ad-Free For Free" button */
+    .kBtJDm.InjectLayout-sc-1i43xsx-0 > .GOdqv.ScCoreButton-sc-ocjdkq-0,
+    .ScCoreButton-sc-ocjdkq-0.gGttfb,
+
+    /* Hide topbar triple-dot menu */
+    .Layout-sc-1xcs6mc-0.jNQxNh {
+        display: none !important;
+    }
+    
+    /* Hide all Twitch new item indicators */
+    .tw-new-item-indicator__container,
+    .ScNewItemIndicatorWrapper-sc-1udtibe-2,
+    .ScNewItemIndicatorMask-sc-1udtibe-1,
+    .ScNewItemIndicator-sc-1udtibe-0 {
+    display: none !important;
+}
+
+}
+
