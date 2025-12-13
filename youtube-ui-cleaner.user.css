@@ -1,0 +1,92 @@
+/* ==UserStyle==
+@name        YouTube UI Cleaner
+@namespace   https://github.com/RaspberryKitty1/UserScripts
+@version     1.0
+@description Removes distractions from the YouTube interface.
+@author      Raspberrykitty1
+@homepageURL https://github.com/RaspberryKitty1/UserScripts
+@match       *://www.youtube.com/*
+@run-at      document-start
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+
+/* ================================================== */
+/*                 HEADER CLEANUP                    */
+/* ================================================== */
+
+/* Hide upload and voice search buttons */
+a.yt-spec-button-shape-next[aria-label="Upload"],
+#voice-search-button {
+    display: none !important;
+}
+
+/* Hide notifications button and badge */
+ytd-notification-topbar-button-renderer,
+.yt-spec-icon-badge-shape__badge {
+    display: none !important;
+}
+
+/* Hide experimental and tag features */
+#flexible-item-buttons,
+.ysm-tags {
+    display: none !important;
+}
+
+/* ================================================== */
+/*                SIDEBAR CLEANUP                    */
+/* ================================================== */
+
+/* Hide Explore and "More from YouTube" sections */
+ytd-guide-section-renderer.style-scope:nth-of-type(4),
+ytd-guide-section-renderer.style-scope:nth-of-type(5) {
+    display: none !important;
+}
+
+/* Hide utility sidebar links */
+ytd-guide-entry-renderer a[href="/reporthistory"],
+ytd-guide-entry-renderer a[title="Help"],
+ytd-guide-entry-renderer a[title="Send feedback"] {
+    display: none !important;
+}
+
+/* Hide sidebar footer links */
+ytd-guide-renderer #footer {
+    display: none !important;
+}
+
+/* Safety override to keep last section visible */
+ytd-guide-renderer > #sections > ytd-guide-section-renderer:last-child {
+    display: block !important;
+}
+
+/* ================================================== */
+/*               WATCH PAGE CLEANUP                  */
+/* ================================================== */
+
+/* Hide recommended videos sidebar */
+#secondary {
+    display: none !important;
+}
+
+/* Hide AI summary and filter chips */
+ytd-expandable-metadata-renderer,
+yt-related-chip-cloud-renderer {
+    display: none !important;
+}
+
+/* Expand video content to full width */
+ytd-watch-flexy:not([hidden]) #columns.ytd-watch-flexy {
+    grid-template-columns: 1fr !important;
+    max-width: unset !important;
+}
+
+#primary,
+#primary-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+}
+
+}

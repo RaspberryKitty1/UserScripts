@@ -1,8 +1,8 @@
 /* ==UserStyle==
-@name        X/Twitter UI Cleaner
+@name        X / Twitter UI Cleaner
 @namespace   https://x.com
-@version     1.7.1
-@description Hides news segments, right-hand panels, trends, "who to follow", Grok buttons, Premium prompts, Tag location, Schedule post, Articles & Highlights tabs, and other clutter for a cleaner X.com/Twitter interface
+@version     1.7.2
+@description Removes sidebars, trends, Grok, Premium prompts, post tools, and other UI clutter.
 @author      Raspberrykitty1
 @homepageURL https://x.com
 @match       *://x.com/*
@@ -11,29 +11,30 @@
 ==/UserStyle== */
 
 @-moz-document domain("x.com"), domain("twitter.com") {
-/* ================================== */
-/*           Sidebar & Panels         */
-/* ================================== */
 
-/* Hide the entire Grok drawer */
+/* ================================================== */
+/*               SIDEBARS & PANELS                    */
+/* ================================================== */
+
+/* Hide Grok drawer */
 div[data-testid="GrokDrawer"],
-/* Hide the sidebar completely */
+
+/* Hide news and trending sidebars */
 div[data-testid="news_sidebar"],
-/* Hide Twitter "Trending now" / "What's happening" sidebar */
 div[aria-label="Timeline: Trending now"] {
     display: none !important;
 }
 
-/* Hide Super Upsell Card (Premium prompt) */
+/* Hide Premium upsell card */
 div[data-testid="super-upsell-UpsellCardRenderProperties"] {
     display: none !important;
 }
 
-/* ================================== */
-/*          Sidebar Links & Tabs      */
-/* ================================== */
+/* ================================================== */
+/*               SIDEBAR LINKS & TABS                 */
+/* ================================================== */
 
-/* Hide specific sidebar links */
+/* Hide unused navigation links */
 a[aria-label="Communities"],
 a[aria-label="Grok"],
 a[aria-label="Bookmarks"],
@@ -45,7 +46,7 @@ a[href="/i/monetization"] {
     display: none !important;
 }
 
-/* Hide Premium signup link / tabs */
+/* Hide Premium-related links */
 a[aria-label="Premium"],
 a[data-testid="premium-signup-tab"],
 a[role="link"][href="/i/premium_sign_up"],
@@ -53,50 +54,46 @@ a[href^="/i/premium_sign_up?referring_page=settings"] {
     display: none !important;
 }
 
-/* Hide Creator Subscriptions tab in settings */
-a[href^="/settings/manage_subscriptions"] {
-    display: none !important;
-}
-
-/* Hide Monetization tab in settings */
+/* Hide Creator Subscriptions and Monetization settings */
+a[href^="/settings/manage_subscriptions"],
 a[href^="/settings/monetization"] {
     display: none !important;
 }
 
-/* ================================== */
-/*          Buttons / Actions         */
-/* ================================== */
+/* ================================================== */
+/*               BUTTONS & ACTIONS                   */
+/* ================================================== */
 
-/* Hide Grok / Bookmark / Profile actions buttons */
+/* Hide Grok, Bookmark, and Profile summary buttons */
 button[aria-label="Grok actions"],
 button[aria-label="Bookmark"],
 button[aria-label="Profile Summary"] {
     display: none !important;
 }
 
-/* Hide Grok "Enhance your post" button */
+/* Hide Grok image generation button */
 button[data-testid="grokImgGen"],
 div[role="presentation"] > button[data-testid="grokImgGen"] {
     display: none !important;
 }
 
-/* Hide Tag location button */
+/* Hide location tagging button */
 button[data-testid="geoButton"],
 div[role="presentation"] > button[data-testid="geoButton"] {
     display: none !important;
 }
 
-/* Hide Schedule post button */
+/* Hide scheduled post button */
 button[data-testid="scheduleOption"],
 div[role="presentation"] > button[data-testid="scheduleOption"] {
     display: none !important;
 }
 
-/* ================================== */
-/*          Tabs: Articles & Highlights */
-/* ================================== */
+/* ================================================== */
+/*             PROFILE TABS CLEANUP                  */
+/* ================================================== */
 
-/* Hide Articles & Highlights tabs and their parent containers */
+/* Hide Articles and Highlights tabs */
 div[role="presentation"]:has(> a[href$="/articles"]),
 div[role="presentation"]:has(> a[href$="/highlights"]) {
     display: none !important;

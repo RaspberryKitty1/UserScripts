@@ -1,57 +1,70 @@
 /* ==UserStyle==
 @name        NotebookLM UI Cleaner
 @namespace   https://notebooklm.google.com
-@version     1.3
-@description Hides Discovery sections, promotional content, footer, notes, sharing UI, Google Apps menu, featured notebooks, and toggles for a cleaner interface. Now available on GitHub.
+@version     1.3.1
+@description Hides Discovery sections, promotional content, footer, notes, sharing UI, Google Apps menu, featured notebooks, and toggles for a cleaner interface.
 @author      Raspberrykitty1
 @homepageURL https://github.com/RaspberryKitty1/UserScripts
 ==/UserStyle== */
 
 @-moz-document domain("notebooklm.google.com") {
-/* ==================================================
-   HIDE FOOTER AND DISCLAIMER
-   ================================================== */
+
+/* ================================================== */
+/*                FOOTER & DISCLAIMER               */
+/* ================================================== */
+
+/* Hide footer and disclaimer */
 footer.footer,
 .footer.mat-body-small {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE DISCOVERY / PROMO SECTIONS
-   ================================================== */
+/* ================================================== */
+/*              DISCOVERY / PROMO SECTIONS          */
+/* ================================================== */
+
+/* Hide discovery and promo containers */
 .source-discovery-container,
 .source-discovery-promo-container {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE SHARE / NON-CTA BUTTONS
-   ================================================== */
+/* ================================================== */
+/*               SHARE / NON-CTA BUTTONS           */
+/* ================================================== */
+
+/* Hide share buttons and other non-CTA buttons */
 .non-cta-buttons-container,
 .share-button,
 .share-button-container {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE ADD NOTE BUTTON
-   ================================================== */
+/* ================================================== */
+/*                ADD NOTE BUTTON                   */
+/* ================================================== */
+
+/* Hide Add Note button and save-to-note text */
 .add-note-button,
 button .save-to-note-text,
 button.mdc-button.label-medium-button.mdc-button--outlined.mat-unthemed {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE GOOGLE APPS MENU
-   ================================================== */
+/* ================================================== */
+/*                GOOGLE APPS MENU                  */
+/* ================================================== */
+
+/* Hide Google Apps menu */
 #gbwa .gb_D {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE FEATURED NOTEBOOKS (MAIN PAGE)
-   ================================================== */
+/* ================================================== */
+/*           FEATURED NOTEBOOKS (MAIN PAGE)        */
+/* ================================================== */
+
+/* Hide featured projects, see-all buttons, and editor's picks toggle */
 .featured-projects-container,
 .see-all-button-container,
 .project-section-toggle-option .editors-picks-toggle-label,
@@ -59,9 +72,11 @@ button.mdc-button.label-medium-button.mdc-button--outlined.mat-unthemed {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE FEEDBACK BUTTONS (THUMBS UP/DOWN)
-   ================================================== */
+/* ================================================== */
+/*           FEEDBACK BUTTONS (THUMBS UP/DOWN)     */
+/* ================================================== */
+
+/* Hide thumbs up/down feedback buttons */
 button[mattooltip="Good discussion"],
 button[mattooltip="Good summary"],
 button[mattooltip="Bad discussion"],
@@ -69,18 +84,22 @@ button[mattooltip="Bad summary"] {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE UPGRADE / PRO BUTTON
-   ================================================== */
+/* ================================================== */
+/*                UPGRADE / PRO BUTTON             */
+/* ================================================== */
+
+/* Hide upgrade / Pro buttons */
 button#UPGRADE_OR_MANAGE_PLUS,
 button#UPGRADE_OR_MANAGE_PLUS span.mat-mdc-menu-item-text,
 button#UPGRADE_OR_MANAGE_PLUS .upgrade-icon-wrapper {
   display: none !important;
 }
 
-/* ==================================================
-   HIDE INTERACTIVE MODE BUTTON
-   ================================================== */
+/* ================================================== */
+/*             INTERACTIVE MODE BUTTON             */
+/* ================================================== */
+
+/* Hide Interactive Mode button */
 .artifact-action-container button[mattooltip="Interactive mode"] {
   display: none !important;
 }
