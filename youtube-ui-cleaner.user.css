@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        YouTube UI Cleaner
 @namespace   https://github.com/RaspberryKitty1/UserScripts
-@version     1.0
+@version     1.0.1
 @description Removes distractions from the YouTube interface.
 @author      Raspberrykitty1
 @homepageURL https://github.com/RaspberryKitty1/UserScripts
@@ -63,11 +63,6 @@ ytd-guide-renderer > #sections > ytd-guide-section-renderer:last-child {
 /* ================================================== */
 /*               WATCH PAGE CLEANUP                  */
 /* ================================================== */
-
-/* Hide recommended videos sidebar */
-#secondary {
-    display: none !important;
-}
 
 /* Hide AI summary and filter chips */
 ytd-expandable-metadata-renderer,
