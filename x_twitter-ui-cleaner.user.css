@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        X / Twitter UI Cleaner
 @namespace   https://x.com
-@version     1.7.2
+@version     1.7.3
 @description Removes sidebars, trends, Grok, Premium prompts, post tools, and other UI clutter.
 @author      Raspberrykitty1
 @homepageURL https://x.com
@@ -31,7 +31,7 @@ div[data-testid="super-upsell-UpsellCardRenderProperties"] {
 }
 
 /* ================================================== */
-/*               SIDEBAR LINKS & TABS                 */
+/* SIDEBAR LINKS & TABS                */
 /* ================================================== */
 
 /* Hide unused navigation links */
@@ -42,15 +42,28 @@ a[aria-label="Lists"],
 a[aria-label="Search and explore"],
 a[href^="https://ads.x.com"],
 a[href="/i/spaces/start"],
-a[href="/i/monetization"] {
+a[href="/i/monetization"],
+a[href="/i/jf/creators/studio"],      /* Creator Studio */
+a[href="/i/connect_people"],           /* Follow/Connect */
+a[data-testid="AppTabBar_Follow_Link"] {
     display: none !important;
 }
 
-/* Hide Premium-related links */
+/* ================================================== */
+/* PREMIUM & UPSELLS                   */
+/* ================================================== */
+
+/* Hide Premium sidebar modules and upsell cards */
+aside[aria-label="Subscribe to Premium"],
+div:has(> aside[aria-label="Subscribe to Premium"]),
+div[data-testid="super-upsell-UpsellCardRenderProperties"],
+aside[aria-label="Verified Organizations"],
+
+/* Hide Premium-specific navigation and tabs */
 a[aria-label="Premium"],
 a[data-testid="premium-signup-tab"],
-a[role="link"][href="/i/premium_sign_up"],
-a[href^="/i/premium_sign_up?referring_page=settings"] {
+a[role="link"][href^="/i/premium_sign_up"],
+a[href*="referring_page=settings"] {
     display: none !important;
 }
 
