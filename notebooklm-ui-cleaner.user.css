@@ -1,13 +1,13 @@
 /* ==UserStyle==
 @name        NotebookLM UI Cleaner
-@namespace   https://notebooklm.google.com
-@version     1.3.1
+@namespace   https://notebook.google.com
+@version     1.3.2
 @description Hides Discovery sections, promotional content, footer, notes, sharing UI, Google Apps menu, featured notebooks, and toggles for a cleaner interface.
 @author      Raspberrykitty1
 @homepageURL https://github.com/RaspberryKitty1/UserScripts
 ==/UserStyle== */
 
-@-moz-document domain("notebooklm.google.com") {
+@-moz-document domain("notebook.google.com") {
 
 /* ================================================== */
 /*                FOOTER & DISCLAIMER               */
