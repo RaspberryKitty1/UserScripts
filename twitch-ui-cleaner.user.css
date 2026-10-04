@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Twitch UI Cleaner
 @namespace   https://twitch.tv
-@version     1.1.1
+@version     1.1.2
 @description Hides Bits, Stories, promotional buttons, chat options, and other clutter for a cleaner Twitch interface.
 @author      Raspberrykitty1
 @homepageURL https://github.com/RaspberryKitty1/UserScripts
@@ -21,8 +21,7 @@ button[aria-label="Bits and Points Balances"] .kAcorY > .eCNebZ {
 }
 
 /* Remove Bits number text */
-button[aria-label="Bits and Points Balances"]
-[data-test-selector="bits-balance-string"] {
+button[aria-label="Bits and Points Balances"] [data-test-selector="bits-balance-string"] {
     display: none !important;
 }
 
@@ -45,7 +44,7 @@ button[aria-label="Bits and Points Balances"] .kAcorY {
 }
 
 /* ================================================== */
-/*                   CHAT CLEANUP                    */
+/*                    CHAT CLEANUP                    */
 /* ================================================== */
 
 /* Hide chat "More options" button */
@@ -54,7 +53,7 @@ button[data-a-target="report-button-more-button"] {
 }
 
 /* ================================================== */
-/*                 STORIES CLEANUP                   */
+/*                 STORIES CLEANUP                    */
 /* ================================================== */
 
 /* Hide Stories section and controls */
@@ -66,12 +65,13 @@ button[aria-label="Open stories"] {
 }
 
 /* ================================================== */
-/*               PROMOTIONS & ADS                    */
+/*                PROMOTIONS & ADS                    */
 /* ================================================== */
 
-/* Hide "Go Ad-Free For Free" buttons */
+/* Hide "Go Ad-Free" / "Try 1-Month Ad-Free" buttons */
 .kBtJDm.InjectLayout-sc-1i43xsx-0 > .GOdqv.ScCoreButton-sc-ocjdkq-0,
-.ScCoreButton-sc-ocjdkq-0.gGttfb {
+.ScCoreButton-sc-ocjdkq-0.gGttfb,
+button:has([data-a-target="tw-core-button-label-text"]):has(path[d*="m13 8-5.349"]) {
     display: none !important;
 }
 
