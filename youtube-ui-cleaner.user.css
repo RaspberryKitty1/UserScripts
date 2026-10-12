@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        YouTube UI Cleaner
 @namespace   https://github.com/RaspberryKitty1/UserScripts
-@version     1.0.1
+@version     1.0.2
 @description Removes distractions from the YouTube interface.
 @author      Raspberrykitty1
 @homepageURL https://github.com/RaspberryKitty1/UserScripts
@@ -30,6 +30,11 @@ ytd-notification-topbar-button-renderer,
 /* Hide experimental and tag features */
 #flexible-item-buttons,
 .ysm-tags {
+    display: none !important;
+}
+
+/* Hide "Ask YouTube" button */
+button[aria-label="Ask YouTube"] {
     display: none !important;
 }
 
@@ -82,6 +87,21 @@ ytd-watch-flexy:not([hidden]) #columns.ytd-watch-flexy {
     max-width: 100% !important;
     min-width: 0 !important;
     flex: 1 1 100% !important;
+}
+
+/* Hide channel membership/sponsor button */
+#sponsor-button {
+    display: none !important;
+}
+
+/* Hide product/merchandise shelf */
+#product-shelf {
+    display: none !important;
+}
+
+/* Hide shopping description shelf */
+#shopping-description-shelf {
+    display: none !important;
 }
 
 }
